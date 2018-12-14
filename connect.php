@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Club des anciennes - Rallyes automobiles en Bourgogne</title>
+
+    <!-- Bootstrap -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <script>
+      function myFunction() {
+        var x = document.getElementById("monMenu");
+        if (x.className === "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      } 
+     </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="img/plaquette.png" alt="plaquette">
+      <ul class="menu" id="monMenu">
+        <li class="menu-item"><a href="index.html">Accueil</a></li>
+        <li class="menu-item"><a href="a-propos.html">A propos de nous</a></li>
+        <li class="menu-item"><a href="event.html">Événements à venir</a></li>
+        <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
+        <li style="float:right" class="menu-item"><a href="connect.php" class="active">Se connecter</a></li>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </ul> 
+    </header>
+    <h1>Se connecter</h1>
+    
+      <form method="post" action="connect.php" class="formConnexion">
+      <fieldset>
+      <legend>Connexion</legend>
+
+      <div>
+        <label for="pseudo" class="coordonnees">Pseudo :</label>
+        <input name="pseudo" type="text" id="pseudo" />
+      </div>
+
+      <div>
+        <label for="password" class="coordonnees">Mot de Passe :</label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      </fieldset>
+      <p><input type="submit" value="Connexion" id="btnConnexion" /></p></form>       
+      </div>
+
+    <footer>
+        <p class="footer">Footer</p>
+    </footer>
+  </body>
+</html>
