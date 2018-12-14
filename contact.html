@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -29,6 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
     <header>
       <img id="logo" src="img/plaquette.png" alt="plaquette">
@@ -36,35 +38,86 @@
         <li class="menu-item"><a href="index.html">Accueil</a></li>
         <li class="menu-item"><a href="a-propos.html">A propos de nous</a></li>
         <li class="menu-item"><a href="event.html">Événements à venir</a></li>
-        <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
-        <li style="float:right" class="menu-item"><a href="connect.php" class="active">Se connecter</a></li>
+        <li class="menu-item"><a href="contact.html" class="active">Nous contacter</a></li>
+        <li style="float:right" class="menu-item"><a href="connect.php">Se connecter</a></li>
 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </ul> 
     </header>
-    <h1>Se connecter</h1>
-    
-      <form method="post" action="connect.php" class="formConnexion">
-      <fieldset>
-      <legend>Connexion</legend>
 
-      <div>
-        <label for="pseudo" class="coordonnees">Pseudo :</label>
-        <input name="pseudo" type="text" id="pseudo" />
+    <h1>Contacter le Club des Anciennes</h1>
+
+    <div class="row" id="global">
+        <div id="gauche">
+          <form class="well">
+            
+            <legend>N'hésitez pas à nous laisser un message</legend><br/>
+
+            <fieldset>
+              <legend>Vos coordonnées</legend>
+              <div>
+                <label for="name" class="coordonnees">Nom prénom :</label>
+                <input type="text" name="name" id="name" />
+              </div>
+
+              <div>
+                <label for="mail" class="coordonnees">Mail :</label>
+                <input type="email" name="mail" id="mail" />
+              </div>
+
+              <div>
+                <label for="tel" class="coordonnees">Téléphone :</label>
+                <input type="tel" name="tel" id="tel" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Informations</legend>
+              <div class="radio">
+
+                <p>Comment avez-vous connu notre club ?</p><br/>
+                <label for="ami" class="radio">
+                  <input type="radio" name="origine" value="ami" id="ami">
+                  Par un ami / famille
+                </label>
+              </div>
+              <div class="radio">
+                <label for="web" class="radio">
+                  <input type="radio" name="origine" value="web" id="web">
+                  Sur le web 
+                </label>
+              </div>
+              <div class="radio">
+                <label for="hasard" class="radio">
+                  <input type="radio" name="origine" value="hasard" id="hasard">
+                  Par hasard 
+                </label>
+              </div>
+              <div class="radio">
+                <label for="autre" class="radio">
+                  <input type="radio" name="origine" value="autre" id="autre">
+                  Autre... 
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Votre message</legend>
+                <textarea id="textarea" class="form-control" rows="4"></textarea><br/><br/>
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+            </fieldset>
+          </form>
+        </div>
+        <div id="droite">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44538.569279242016!2d4.800101643347054!3d45.757950150903056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516ae88797%3A0x408ab2ae4bb21f0!2sLyon!5e0!3m2!1sfr!2sfr!4v1544700411787" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <h3>Adresse : </h3> <p>10 rue truc 45678 MACHIN</p>
+          <h3>Téléphone : </h3> <p>0000000000</p>
+          <h3>Mail : </h3> <p>contact@nomdedomaine.com</p>
+        </div>
       </div>
-
-      <div>
-        <label for="password" class="coordonnees">Mot de Passe :</label>
-        <input type="password" name="password" id="password" />
-      </div>
-
-      </fieldset>
-      <p><input type="submit" value="Connexion" id="btnConnexion" /></p></form>       
-      </div>
-
-    <footer>
+      <footer>
         <p class="footer">Footer</p>
     </footer>
   </body>
