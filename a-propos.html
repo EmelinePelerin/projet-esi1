@@ -9,6 +9,18 @@
 
     <!-- Bootstrap -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <script>
+      function myFunction() {
+        var x = document.getElementById("monMenu");
+        if (x.className === "menu") {
+          x.className += " responsive";
+        } else {
+          x.className = "menu";
+        }
+      } 
+     </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,17 +32,21 @@
   <body>
     <header>
       <img id="logo" src="img/plaquette.png" alt="plaquette">
-      <ul class="menu">
+      <ul class="menu" id="monMenu">
         <li class="menu-item"><a href="index.html">Accueil</a></li>
         <li class="menu-item"><a href="a-propos.html" class="active">A propos de nous</a></li>
         <li class="menu-item"><a href="event.html">Événements à venir</a></li>
         <li class="menu-item"><a href="contact.html">Nous contacter</a></li>
-        <li style="float:right" class="menu-item"><a href="about.asp">Se connecter</a></li>
+        <li style="float:right" class="menu-item"><a href="connect.php">Se connecter</a></li>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </ul> 
     </header>
     
     <footer>
-        <p>Footer</p>
+        <p class="footer">Footer</p>
     </footer>
   </body>
 </html>
